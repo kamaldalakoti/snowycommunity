@@ -1,0 +1,66 @@
+<style>
+    .sec {
+        /* background-color: rgb(102, 148, 148); */
+        margin-top: 20px;
+    }
+    
+    #box {
+        background-color: #ff7700;
+    }
+    
+    .na {
+        color: blue!important;
+    }
+    /* social media icon  */
+    /* social media icon  */
+</style>
+{% extends "base.html" %} {% block title %}About Us {% endblock title %} {% block body %}
+
+<section class="text-gray-700 body-font sec " id="box" onClick="function1()">
+    <div class="container px-5 py-24 mx-auto" onClick="function1()">
+        <div class="flex flex-wrap -mx-4 -my-8">
+            <div class="py-8 px-4 lg:w-1/3">
+                <div class="h-full flex items-start">
+
+                    <div class="flex-grow pl-6">
+                        <h2 class="tracking-widest text-xs title-font font-medium  na">Organisation Name</h2>
+                        <h1 class="title-font text-xl font-medium text-gray-900 mb-3">Snowy Community</h1>
+                        <h2 class="tracking-widest text-xs title-font font-medium  na"><img src="https://img.icons8.com/doodle/48/000000/outgoing-call.png" />Contact Support</h2>
+                        <h1 class="title-font text-xl font-medium text-gray-900 mb-3"><b>7088050201</b></h1>
+                        <h2 class="tracking-widest text-xs title-font font-medium  na"><img src="https://img.icons8.com/officel/16/000000/gmail-login.png" /></h2>
+                        <h1 class="title-font text-xl font-medium text-gray-900 mb-3">snowycommunity5@gmail.com</h1>
+                        <h2 class="tracking-widest text-xs title-font font-medium  na"><img src="https://img.icons8.com/officel/16/000000/whatsapp.png" /></h2>
+                        <h1 class="title-font text-xl font-medium text-gray-900 mb-3"><b>7088050201</b></h1>
+                        <blink>
+                            <b style="color: beige;"> Snowy Community often takes the form of organized, multiplayer video game competitions, particularly between professional players, individually or as teams.
+                        </b></blink>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+<script>
+    // function function1() {
+    //     var check = document.getElementById("box").style;
+    //     check2 = check.backgroundColor;
+    //     if (check2 != "orange") {
+    //         check2 = "#ff7700";
+    //     } else {
+    //         check2 = "#ff0077";
+    //     }
+    // }
+    var div = document.getElementById("box"),
+        toggle = false;
+
+    div.onclick = function() {
+        toggle = !toggle; // invert toggle
+        div.style.background = toggle ? "#ff0077" : "#ff7700"; // change background color depending on the value of toggle
+    }
+
+    div.style.background = "#ff7700";
+</script>
+{% endblock body %}
