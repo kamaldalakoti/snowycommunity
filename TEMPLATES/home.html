@@ -20,18 +20,17 @@
         box-sizing: border-box;
     }
     /* Create two equal columns that floats next to each other */
-    
-    .column1 {
-        float: left;
-        width: 30%!important;
-        padding: 10px;
-        /* height: 300px; */
-        /* Should be removed. Only for demonstration */
-    }
+    /* .column1 { */
+    /* float: left; */
+    /* width: 30%!important; */
+    /* padding: 10px; */
+    /* height: 300px; */
+    /* Should be removed. Only for demonstration */
+    /* } */
     
     .column2 {
         /* float: left; */
-        width: 70%!important;
+        width: 100%!important;
         padding: 10px;
         /* height: 300px; */
         /* Should be removed. Only for demonstration */
@@ -123,77 +122,89 @@
         animation: blink 2s;
         animation-iteration-count: infinite;
     }
-    /* text clr */
     
-    .wrapper {
-        text-align: center;
+    .sec1 {
+        padding: 20px;
+        background-image: url("https://wallpapercave.com/wp/wp3276869.jpg ");
+        /* background-color: cadetblue; */
+    }
+    /* high light */
+    
+    .list-group a {
+        color: wheat;
+        background-color: #13536f;
     }
     
-    .wrapper h1 {
-        color: #fff;
-        font-size: 92px;
-        font-family: "ubuntu";
-        text-transform: uppercase;
-        font-weight: 700;
-        font-family: "Josefin Sans", sans-serif;
-        background: linear-gradient(to right, #e72a3a 10%, #fff 50%, #5bdaff 60%);
-        background-size: auto auto;
-        background-clip: border-box;
-        background-size: 200% auto;
-        color: #fff;
-        background-clip: text;
-        /* text-fill-color: transparent; */
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        animation: textclip 1.5s linear infinite;
-        display: inline-block;
+    .list-group a:hover {
+        color: aqua;
+        background-color: rgb(60, 132, 134);
     }
     
-    @keyframes textclip {
-        to {
-            background-position: 200% center;
-        }
+    .pera p {
+        color: wheat;
     }
-    /* text clr */
+    /* high light */
 </style>
 {% extends "base.html" %} {% block title %}Home{% endblock title %} {% block body %}
-<blink>
-    <marquee direction="loop">
-        <h1 style="font-size: large; color: white; margin-top: 10px;">𝓅𝓊𝒷𝒢 𝒷𝒜𝓉𝓉𝓁𝑒 𝒸𝑜𝑀𝐼𝒩𝒢 𝓈𝑜𝑜𝓃</h1>
-    </marquee>
-</blink>
-<blink>
-    <div class="wrapper">
-
-        <marquee direction="loop">
-            <h1 style="font-size: large; font-family: cursive; color: white; margin-top: 10px; font-style: italic;">pubG bAttle coMING soon</h1>
-        </marquee>
+<section class="sec1">
+    <div id="list-example" class="list-group">
+        <a class="list-group-item list-group-item-action" href="#list-item-1">Item 1</a>
+        <a class="list-group-item list-group-item-action" href="#list-item-2">Item 2</a>
+        <a class="list-group-item list-group-item-action" href="#list-item-3">Item 3</a>
+        <a class="list-group-item list-group-item-action" href="#list-item-4">Item 4</a>
     </div>
-</blink>
-
+    <div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example pera">
+        <h4 id="list-item-1">1</h4>
+        <p>Quis anim sit do amet fugiat dolor velit sit ea ea do reprehenderit culpa duis. Nostrud aliqua ipsum fugiat minim proident occaecat excepteur aliquip culpa aute tempor reprehenderit. Deserunt tempor mollit elit ex pariatur dolore velit fugiat
+            mollit culpa irure ullamco est ex ullamco excepteur.</p>
+        <h4 id="list-item-2">2</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus amet voluptas suscipit exercitationem ab. Tempora exercitationem deserunt, cum nihil neque laudantium inventore, facere harum facilis voluptatem perferendis aspernatur nostrum ratione
+            consequatur dolores debitis quos, blanditiis asperiores provident repudiandae corporis amet consectetur. Iure, quia deleniti? Eos ea corrupti aliquam temporibus eligendi adipisci tempore aperiam, vero quo id consequatur qui quae praesentium
+            soluta incidunt amet veniam, voluptatibus magnam sapiente ipsa veritatis nihil iste aut? Doloribus sint non nihil accusantium quibusdam labore sit inventore, officiis exercitationem hic quae minus eaque, voluptates accusamus porro corporis
+            ad? Vero, rem accusamus suscipit architecto dicta, voluptate praesentium fugit expedita dignissimos natus quasi. Quasi rem minus optio voluptatum repellat amet beatae totam est ex, facilis, voluptas commodi officia necessitatibus facere distinctio
+            nisi mollitia blanditiis a asperiores magnam. Ullam commodi fuga eius quis repellendus. Cumque praesentium facere placeat quia magni veritatis quibusdam pariatur sed eos, molestias in vel deleniti assumenda, ullam harum rerum delectus facilis
+            iusto nostrum? Eum iste ut consequuntur ipsa, excepturi necessitatibus commodi culpa natus tempore nobis repellendus ducimus, vero, quibusdam totam architecto sunt reiciendis odio unde a molestiae! Unde molestiae qui, tempore reiciendis saepe
+            a vero illum modi, hic odio aliquid atque. A facilis maxime accusamus reprehenderit eius! Eligendi cumque rerum ab commodi fugit consequuntur obcaecati veniam. Quos fuga provident sapiente culpa sit cupiditate, voluptates eum?</p>
+        <h4 id="list-item-3">3</h4>
+        <p>Quis anim sit do amet fugiat dolor velit sit ea ea do reprehenderit culpa duis. Nostrud aliqua ipsum fugiat minim proident occaecat excepteur aliquip culpa aute tempor reprehenderit. Deserunt tempor mollit elit ex pariatur dolore velit fugiat
+            mollit culpa irure ullamco est ex ullamco excepteur.</p>
+        <h4 id="list-item-4">4</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum pariatur rerum consequuntur non! Sint unde saepe aspernatur deserunt corrupti assumenda similique atque iste blanditiis? Deserunt facilis, illum provident omnis quo voluptates ipsa
+            amet fugiat autem tempore at architecto! Dolorem id enim laudantium, expedita consectetur velit, eaque explicabo magni doloremque, vel deleniti! Molestias accusantium iure placeat animi obcaecati iusto iste, facere possimus aperiam dolores
+            minima veritatis tenetur modi quo provident fugiat quaerat voluptatibus porro perspiciatis ea totam. Hic, debitis. Nostrum numquam ab, dolor maxime, ratione totam maiores quis perspiciatis at necessitatibus asperiores sint! In doloribus rem
+            asperiores. Enim, odit. Perspiciatis, aliquam..</p>
+    </div>
+</section>
 <section class="text-gray-700 body-font sec">
 
-    <div class="column1">
-        <video controls loop>
-            <source src="movie.mp4" type="video/mp4">
-            <source src="movie.ogg" type="video/ogg">
-            Your browser does not support the video tag.
-          </video>
-    </div>
-    <div class="column1">
+    <!-- <div class="column1">
         <div class="card">
             <img src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-1.2.1&auto=format&fit=crop&w=889&q=80" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">NAME</h5>
                 <h5 class="card-title">POINTS</h5>
 
-                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-            </div>
-        </div>
+                 <a href="#" class="btn btn-primary">Go somewhere</a> 
     </div>
+    </div>
+    </div> -->
 
 
     <div class=" column2 ">
+        <div id="carouselExampleSlidesOnly" style="margin-top: 10px;" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <blink> <img src="https://wallpapercave.com/wp/wp2208679.jpg" class="d-block w-100 img" alt="..."></blink>
+                </div>
+                <div class="carousel-item">
+                    <blink><img src="https://wallpapercave.com/wp/wp3276869.jpg " class="d-block w-100 img" alt="...">
+                    </blink>
+                </div>
+                <div class="carousel-item">
+                    <blink> <img src="https://wallpapercave.com/wp/wp2382721.jpg" class="d-block w-100 img" alt="..."></blink>
+                </div>
+            </div>
+        </div>
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -253,20 +264,7 @@
                 <span class="sr-only ">Next</span>
             </a>
         </div> -->
-        <div id="carouselExampleSlidesOnly" style="margin-top: 10px;" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <blink> <img src="https://wallpapercave.com/wp/wp2208679.jpg" class="d-block w-100 img" alt="..."></blink>
-                </div>
-                <div class="carousel-item">
-                    <blink><img src="https://wallpapercave.com/wp/wp3276869.jpg " class="d-block w-100 img" alt="...">
-                    </blink>
-                </div>
-                <div class="carousel-item">
-                    <blink> <img src="https://wallpapercave.com/wp/wp2382721.jpg" class="d-block w-100 img" alt="..."></blink>
-                </div>
-            </div>
-        </div>
+
     </div>
 
 </section>{% endblock body %}
