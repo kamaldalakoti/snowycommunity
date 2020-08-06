@@ -7,8 +7,104 @@
     <title>{% block title %}{% endblock title %}</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-
     <style>
+        body {
+            font-family: "Lato", sans-serif;
+            transition: background-color .5s;
+        }
+        
+        .nav {
+            z-index: 5;
+            position: fixed;
+        }
+        
+        .nav a {
+            border: 1px solid white;
+            width: 150px;
+            border-left: none;
+            border-right: none;
+            /* margin-bottom: -2px; */
+        }
+        
+        .nav a:hover {
+            background-color: white;
+            color: black!important;
+        }
+        
+        .closebtn {
+            height: 15px;
+            margin-bottom: 3px;
+            border: none!important;
+        }
+        
+        .sidenav {
+            z-index: 5!important;
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+        
+        .sidenav a {
+            padding: 8px 8px 8px 34px;
+            text-decoration: none;
+            font-size: 16px!important;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+        
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+        
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+        
+        .btn {
+            float: right;
+        }
+        
+        #main {
+            /* margin-left: 217px!important; */
+            background-color: gray;
+            z-index: 5;
+            /* position: fixed; */
+            transition: margin-left .5s;
+            padding: 16px;
+        }
+        
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                z-index: 5!important;
+                padding-top: 15px;
+            }
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+        
+        @media screen and (max-width: 1300px) {
+            #h5 {
+                display: none!important;
+            }
+            .btn {
+                display: none;
+            }
+        }
+    </style>
+    <!-- <style>
         body {
             background-color: #343a40;
         }
@@ -34,7 +130,7 @@
             margin-top: 50px;
             padding-left: 50px;
             padding-right: 50px;
-            width: 70%;
+            width: 60%;
             /* margin-right: 10%!important; */
             /* border: 1px solid red; */
         }
@@ -42,18 +138,35 @@
         .nav_item {
             margin-left: 20px;
             /* margin-left: 20px; */
-        }
+        } -->
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
+    <div id="mySidenav" class="sidenav nav">
+        <a href="javascript:void(0)" class="closebtn" onmousemove="closeNav()">&times;</a>
+        <a href="/Home">Home</a>
+        <a href="/About">About</a>
+        <a href="/Registration">Registration</a>
+        <a href="/Players">Players</a>
+        <!-- <a href="/Gallery">Gallery</a>
+        <a href="/Client">Client</a>
+        <a href="#">Contact</a>
+        <a href="/Blog">Blog</a> -->
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar">
-        <img src="https://img.icons8.com/color/48/000000/us-airborne.png" />
+
+    </div>
+    <div id="main" style="border-bottom: 1px solid black; ">
+
+        <h5 id="h5">We Are a Team of Creative Carpenters, Audio Visual and Lighting Specialists. We Specialize in Pop-Up Exhibitions and Low Cost Trade Stands. Build Panels. Transport And Delivery. Planning Schedule. Advice And Insights. Graphics. Options: Buy, Rent</h5>
+        <!-- <button class="btn" onclick="myFunction()">Try it</button> -->
+        <span id="span" style="font-size:30px;cursor:pointer" onmousemove="openNav()">&#9776; </span>
+    </div>
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar">
         <a class="navbar-brand" href="/Home">SNOWY COMMUNITY</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -77,11 +190,51 @@
             </ul>
 
         </div>
-    </nav>
-
+    </nav> -->
 
 
     <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "150px";
+            document.getElementById("main").style.marginLeft = "150px";
+            document.getElementById("span").style.width = "15px";
+            // document.getElementById("h5").style.marginLeft = "150px";
+            document.getElementById("main").style.backgroundColor = "black";
+            document.getElementById("h5").style.Color = "black";
+            document.getElementById("span").style.display = "none";
+
+            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+            document.getElementById("h5").style.marginLeft = "20px";
+            // document.getElementById("pre").style.display = "none"
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            document.getElementById("main").style.backgroundColor = "gray";
+            document.getElementById("h5").style.color = "white";
+            document.getElementById("span").style.display = "block";
+            document.body.style.backgroundColor = "black";
+            document.getElementById("h5").style.marginLeft = "0";
+            document.getElementById("pre").style.display = "flex";
+
+
+        }
+
+
+
+        // function myFunction() {
+        //     var txt;
+        //     var person = prompt("Please enter your name:", "Harry Potter");
+        //     if (person == null || person == "") {
+        //         txt = "User cancelled the prompt.";
+        //     } else {
+        //         txt = "Hello " + person + "! How are you today?";
+        //     }
+        //     document.getElementById("demo").innerHTML = txt;
+        // }
+    </script>
+    <!-- <script>
         const changeColor = document.getElementById('changeColor'),
             colors = ['red', 'green', 'blue'];
         let colorIndex = 0;
@@ -90,7 +243,7 @@
             document.body.style.backgroundColor = colors[colorIndex];
             colorIndex = (colorIndex + 1) % colors.length
         });
-    </script>
+    </script> -->
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
