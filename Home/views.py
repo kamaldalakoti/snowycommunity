@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.contrib import messages
 from Home.models import signup
+from Home.models import news
+
 
 # Create your views here.
 def home(request):
@@ -30,3 +32,8 @@ def playerlist(request):
 def players(request):
 
     return render(request, 'player.html' )
+def News(request):
+    data2 = news.objects.all()
+    go2 = {'data2':data2 }
+
+    return render(request, 'news.html',go2 )

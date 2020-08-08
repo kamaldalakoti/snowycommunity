@@ -1,0 +1,76 @@
+<style>
+    body {
+        background-color: teal!important;
+    }
+    
+    #box {
+        background-color: #ff7700;
+    }
+    
+    .wrapper {
+        text-align: center;
+    }
+    
+    .caat {
+        color: #fff;
+        /* font-size: 92px; */
+        font-family: "ubuntu";
+        /* text-transform: uppercase; */
+        /* font-weight: 700; */
+        font-family: "Josefin Sans", sans-serif;
+        background: linear-gradient(to right, #e72a3a 10%, #fff 50%, #5bdaff 60%);
+        background-size: auto auto;
+        background-clip: border-box;
+        background-size: 200% auto;
+        color: #fff;
+        background-clip: text;
+        /* text-fill-color: transparent; */
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: textclip 1.5s linear infinite;
+        display: inline-block;
+    }
+    
+    @keyframes textclip {
+        to {
+            background-position: 200% center;
+        }
+    }
+    /* text clr */
+</style>
+{% extends "base.html" %} {% block title %}News{% endblock title %} {% block body %}
+
+<section class="text-gray-700 body-font overflow-hidden" id="box">
+    {% for item in data2 %}
+    <div class="container px-5 py-24 mx-auto">
+        <div class="-my-8">
+            <div class="py-8 flex flex-wrap md:flex-no-wrap">
+                <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
+                    <span class="tracking-widest font-medium title-font text-gray-900 caat"><h3>{{item.Cat}}</h3></span>
+                    <span class="mt-1 text-gray-900 text-sm"><b>{{item.Date}}</b></span>
+                </div>
+                <div class="md:flex-grow">
+                    <h2 class="text-2xl font-medium text-gray-900 title-font mb-2"><b>{{item.T1}}</b></h2>
+                    <p class="leading-relaxed" style="color: white;">{{item.Disc}}
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <hr style="background-color: white;"> {% endfor %}
+</section>
+
+<script>
+    var div = document.getElementById("box"),
+        toggle = false;
+
+    div.onclick = function() {
+        toggle = !toggle; // invert toggle
+        div.style.background = toggle ? "#ff0077" : "#ff7700"; // change background color depending on the value of toggle
+    }
+
+    div.style.background = "#ff7700";
+</script>
+{% endblock body %}

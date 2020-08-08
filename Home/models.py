@@ -13,3 +13,11 @@ class signup(models.Model):
     # Pic = models.FileField(upload_to="static", storage=None)
     def __str__(self):
         return self.Name    
+
+class news(models.Model):
+    T1 = models.CharField(max_length=20)
+    Date = models.CharField(max_length=20)
+    Cat = models.CharField(max_length=20)
+    Disc = models.CharField(max_length=2000)
+    def __str__(self):
+        return self.T1    

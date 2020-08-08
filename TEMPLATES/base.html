@@ -53,7 +53,7 @@
             z-index: 1;
             top: 0;
             left: 0;
-            background-color: gray;
+            background-color: rgb(51, 49, 49);
             overflow-x: hidden;
             transition: 0.5s;
             /* padding-top: 60px; */
@@ -64,12 +64,31 @@
             padding: 8px 8px 8px 34px;
             text-decoration: none!important;
             font-size: 16px!important;
-            color: black;
+            color: white;
             display: block;
             transition: 0.3s;
         }
         
         .sidenav a:hover {
+            /* cls  */
+            color: #fff;
+            /* font-size: 92px; */
+            font-family: "ubuntu";
+            /* text-transform: uppercase; */
+            /* font-weight: 700; */
+            font-family: "Josefin Sans", sans-serif;
+            background: linear-gradient(to right, #e72a3a 10%, #fff 50%, #5bdaff 60%);
+            background-size: auto auto;
+            background-clip: border-box;
+            background-size: 200% auto;
+            color: #fff;
+            background-clip: text;
+            /* text-fill-color: transparent; */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: textclip 1.5s linear infinite;
+            display: inline-block;
+            /* cls  */
             color: #f1f1f1;
         }
         
@@ -88,7 +107,7 @@
         #main {
             height: 59px;
             /* margin-left: 217px!important; */
-            background-color: gray;
+            background-color: rgb(128, 128, 128)!important;
             z-index: 5;
             /* position: fixed; */
             transition: margin-left .5s;
@@ -113,6 +132,28 @@
                 display: none;
             }
         }
+        /* clr change */
+        
+        .caat {
+            color: #fff;
+            /* font-size: 92px; */
+            font-family: "ubuntu";
+            /* text-transform: uppercase; */
+            /* font-weight: 700; */
+            font-family: "Josefin Sans", sans-serif;
+            background: linear-gradient(to right, #e72a3a 10%, #fff 50%, #5bdaff 60%);
+            background-size: auto auto;
+            background-clip: border-box;
+            background-size: 200% auto;
+            color: #fff;
+            background-clip: text;
+            /* text-fill-color: transparent; */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: textclip 1.5s linear infinite;
+            display: inline-block;
+        }
+        /* clr change */
     </style>
 
     </style>
@@ -123,11 +164,16 @@
 <body>
     <div id="mySidenav" class="sidenav nav">
         <a href="javascript:void(0)" class="closebtn" onmousemove="closeNav()">&times;</a>
-        <a href="/Home">Home</a>
+        <h2 style="color: white; margin-top: 50px; margin-left: 15px;" class="caat">SNOWY </h2>
+        <h4 style="color: white; " class="caat">COMMUNITY </h4>
+        <hr style="background-color: white; ">
+
+        <a href="/Home" class="cls">Home</a>
+        <a href="/News">News</a>
         <a href="/About">About</a>
         <a href="/Registration">Registration</a>
         <a href="/Players" id="ply">Players</a>
-        <br>
+        <hr style="background-color: white; ">
         <!-- <a href="/Gallery">Gallery</a>
         <a href="/Client">Client</a>
         <a href="#">Contact</a>
