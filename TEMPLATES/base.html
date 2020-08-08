@@ -15,16 +15,17 @@
         }
         
         .nav {
+            display: block!important;
             z-index: 5;
             position: fixed;
         }
         
         .nav a {
-            border: 1px solid white;
+            /* border: 1px solid rgb(177, 48, 48); */
             width: 150px;
             border-left: none;
             border-right: none;
-            /* margin-bottom: -2px; */
+            margin-bottom: -2px;
         }
         
         .nav a:hover {
@@ -37,8 +38,14 @@
             margin-bottom: 3px;
             border: none!important;
         }
+        /* line */
+        /* #ply {
+            border-bottom: 2px solid white;
+        } */
+        /* line */
         
         .sidenav {
+            display: block;
             z-index: 5!important;
             height: 100%;
             width: 0;
@@ -46,17 +53,18 @@
             z-index: 1;
             top: 0;
             left: 0;
-            background-color: #111;
+            background-color: gray;
             overflow-x: hidden;
             transition: 0.5s;
-            padding-top: 60px;
+            /* padding-top: 60px; */
         }
         
         .sidenav a {
+            /* height: 20px; */
             padding: 8px 8px 8px 34px;
-            text-decoration: none;
+            text-decoration: none!important;
             font-size: 16px!important;
-            color: #818181;
+            color: black;
             display: block;
             transition: 0.3s;
         }
@@ -78,12 +86,13 @@
         }
         
         #main {
+            height: 59px;
             /* margin-left: 217px!important; */
             background-color: gray;
             z-index: 5;
             /* position: fixed; */
             transition: margin-left .5s;
-            padding: 16px;
+            padding: 5px;
         }
         
         @media screen and (max-height: 450px) {
@@ -105,41 +114,7 @@
             }
         }
     </style>
-    <!-- <style>
-        body {
-            background-color: #343a40;
-        }
-        
-        .nav_item:hover {
-            color: aqua!important;
-        }
-        
-        @media screen and (max-width: 513px) {
-            .navbar-brand {
-                display: none;
-            }
-        }
-        
-        .navbar {
-            background-color: black!important;
-            /* position: absolute; */
-            border-radius: 40px;
-            /* height: 60px; */
-            border-bottom-left-radius: 40px;
-            border-top-left-radius: 40px;
-            margin-left: 20%;
-            margin-top: 50px;
-            padding-left: 50px;
-            padding-right: 50px;
-            width: 60%;
-            /* margin-right: 10%!important; */
-            /* border: 1px solid red; */
-        }
-        
-        .nav_item {
-            margin-left: 20px;
-            /* margin-left: 20px; */
-        } -->
+
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
@@ -151,7 +126,8 @@
         <a href="/Home">Home</a>
         <a href="/About">About</a>
         <a href="/Registration">Registration</a>
-        <a href="/Players">Players</a>
+        <a href="/Players" id="ply">Players</a>
+        <br>
         <!-- <a href="/Gallery">Gallery</a>
         <a href="/Client">Client</a>
         <a href="#">Contact</a>
@@ -161,8 +137,7 @@
     </div>
     <div id="main" style="border-bottom: 1px solid black; ">
 
-        <h5 id="h5">Snowy Community often takes the form of organized, multiplayer video game competitions, particularly between professional players, individually or as teams.</h5>
-        <!-- <button class="btn" onclick="myFunction()">Try it</button> -->
+        <!-- <h5 id="h5">Snowy Community often takes the form of organized, multiplayer video game competitions, particularly between professional players, individually or as teams.</h5> -->
         <span id="span" style="font-size:30px;cursor:pointer" onmousemove="openNav()">&#9776; </span>
     </div>
     <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar">
@@ -207,7 +182,7 @@
 
             document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
             document.getElementById("h5").style.marginLeft = "20px";
-            // document.getElementById("pre").style.display = "none"
+            // document.getElementById("ply").style.display = "none"
         }
 
         function closeNav() {
