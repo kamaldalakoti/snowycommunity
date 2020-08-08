@@ -7,14 +7,8 @@
     .sec {
         display: flex;
         border-top: 2px solid;
-        background-image: url("https://wallpapercave.com/wp/wp2208672.jpg");
-        background-position: center;
-        background-size: cover;
+        background-color: #1e3d5f;
         height: 800px!important;
-        /* background-repeat: no-repeat; */
-        background-attachment: fixed;
-        background-size: cover;
-        /* height: auto; */
     }
     
     .form {
@@ -28,25 +22,31 @@
     }
     
     .row input {
-        background: transparent;
+        /* background: transparent; */
         width: 100%;
     }
     
     .btn {
-        background-color: transparent!important;
-        width: 100%;
-        margin-left: 21%;
+        /* background-color: transparent!important; */
+        width: 40%;
+        margin-left: 30%;
+        margin-right: 30%;
     }
-    
-    .btn:hover {
+    /* .btn:hover {
         opacity: 0.4;
     }
+     */
     
     @media screen and (max-width: 572px) {
         .btn {
             margin-left: auto;
             margin-top: 30px;
         }
+    }
+    
+    #chk {
+        width: 3%;
+        margin-right: 100%!important;
     }
 </style>
 {% extends "base.html" %} {% block title %}Registration{% endblock title %} {% block body %}
@@ -72,7 +72,6 @@
         </div>
         <hr style="border-color: seashell;">
 
-        <hr style="border-color: seashell;">
         <div class="form-group row">
             <label for="inputEmail3" class="col-sm-2 col-form-label">City </label>
             <div class="col-sm-10">
@@ -94,6 +93,15 @@
             </div>
         </div>
 
+        <hr style="border-color: seashell;">
+        <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">Terms & Conditions </label>
+            <div class="col-sm-10">
+                <input type="checkbox" name="State" id="chk" required>
+            </div>
+
+
+        </div>
         <hr style="border-color: seashell;">
 
 

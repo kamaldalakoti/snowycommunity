@@ -13,9 +13,7 @@ def Registration(request):
     if request.method == "POST":
         Name  = request.POST.get('Name')
         Phone  = request.POST.get('Phone')   
-        PubgID  = request.POST.get('PubgID')
         City  = request.POST.get('City')
-        Pic  = request.POST.get('Pic')
         State  = request.POST.get('State')
         District  = request.POST.get('District')
         Registration = signup(Name=Name, Phone=Phone, City=City, District=District, State=State)
