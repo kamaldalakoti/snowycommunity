@@ -18,7 +18,7 @@ def Registration(request):
         Pic  = request.POST.get('Pic')
         State  = request.POST.get('State')
         District  = request.POST.get('District')
-        Registration = signup(Name=Name, Phone=Phone, PubgID=PubgID, City=City, District=District, State=State,Pic=Pic)
+        Registration = signup(Name=Name, Phone=Phone, City=City, District=District, State=State)
         Registration.save()
         messages.success(request, ' Submition Successfull')
     return render(request, 'registration.html')    
