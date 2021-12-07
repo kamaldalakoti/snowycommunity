@@ -22,12 +22,12 @@ def Registration(request):
     return render(request, 'registration.html')    
 def about(request):
     return render(request, 'about.html')    
-def playerlist(request):
+def players(request):
     data = signup.objects.all()
     go = {'data':data }
 
     return render(request, 'playerlist.html', go )
-def players(request):
+def player(request):
 
     return render(request, 'player.html' )
 def News(request):
